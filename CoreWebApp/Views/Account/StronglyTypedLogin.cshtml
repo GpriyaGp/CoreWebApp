@@ -1,0 +1,26 @@
+﻿@model CoreWebApp.Models.LoginViewModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="wid288th=device-width" />
+    <title>StronglyTypedLogin</title>
+</head>
+<body>
+    @using (Html.BeginForm("LoginSuccess","Account",FormMethod.Post))
+    {
+        <div>
+         Username:@Html.TextBoxFor(m=>m.Name)
+        </div>
+        <div>
+         Password:@Html.PasswordFor(m=>m.Password)
+        </div>
+        <div>
+            <input type="submit" value="Login"/>
+        </div>
+    }
+</body>
+</html>

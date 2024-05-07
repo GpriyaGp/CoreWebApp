@@ -1,0 +1,26 @@
+﻿@model IList<CoreWebApp.Models.LoginViewModel>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>usersList</title>
+</head>
+<body>
+    <h2>UsersList</h2>
+    <ul>
+        @foreach(var item in Model)
+        {
+            <li>
+                @item.Name and @item.Password
+            </li>
+        }
+    </ul>
+
+</body>
+</html>
